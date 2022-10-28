@@ -1,0 +1,119 @@
+@import './colors';
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: 'Kumbh Sans', sans-serif;
+	background-image: linear-gradient($gradient-violet, $gradient-blue);
+}
+
+.card {
+	position: relative;
+	margin-top: 10em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 86%;
+	background-color: #ffffff;
+	border-radius: 1.6em;
+
+	&__text {
+		position: relative;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 7em;
+		font-size: 14px;
+		padding-bottom: 2em;
+
+		&-question {
+			padding: 1em 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 0.3em;
+			font-size: 2rem;
+		}
+
+		img {
+			position: absolute;
+			right: 0;
+			margin-top: 0.5em;
+			cursor: pointer;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		display: block;
+		height: auto;
+		top: -7em;
+
+		img {
+			margin-left: 3em;
+			width: 70%;
+		}
+	}
+}
+
+.hidden {
+	display: none;
+	overflow: hidden;
+}
+
+@media (min-width: 992px) {
+	.card {
+		width: 1000px;
+		overflow: hidden;
+
+		h1 {
+			margin-left: 2.8em;
+		}
+
+		hr {
+			margin-left: 0em;
+			width: 95%;
+		}
+
+		&__img {
+			margin-top: 15em;
+			left: 40%;
+
+			img {
+				width: 45%;
+			}
+		}
+
+		&__text {
+			margin-top: -4em;
+			padding-bottom: 4em;
+
+			img {
+				margin-right: 3em;
+			}
+
+			&-question {
+				margin-left: 33em;
+
+				&-btn {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
